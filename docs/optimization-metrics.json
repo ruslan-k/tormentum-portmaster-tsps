@@ -1,0 +1,52 @@
+{
+  "optim-baseline": {
+    "preload_seconds": 15.924,
+    "rss_kib": 752844,
+    "swap_kib": 20688,
+    "fps": [
+      20.38,
+      30.01,
+      25.65,
+      30.02,
+      24.59
+    ],
+    "audio_spec": "audio_spec freq=44100 channels=2 samples=2048"
+  },
+  "optim-cache-cold": {
+    "preload_seconds": 24.262,
+    "rss_kib": 534860,
+    "swap_kib": 0,
+    "fps": [
+      17.1,
+      30.0,
+      26.6
+    ],
+    "audio_spec": "audio_spec freq=44100 channels=2 samples=2048"
+  },
+  "optim-cache-warm": {
+    "preload_seconds": 15.356,
+    "rss_kib": 605340,
+    "swap_kib": 0,
+    "fps": [
+      20.76,
+      29.99,
+      25.82,
+      23.55,
+      25.32
+    ],
+    "audio_spec": "audio_spec freq=44100 channels=2 samples=2048"
+  },
+  "optim-audio1024": {
+    "preload_seconds": 16.048,
+    "rss_kib": 569612,
+    "swap_kib": 0,
+    "fps": [
+      20.3,
+      29.99,
+      27.47,
+      25.38,
+      25.25
+    ],
+    "audio_spec": "audio_spec freq=44100 channels=2 samples=1024"
+  }
+}

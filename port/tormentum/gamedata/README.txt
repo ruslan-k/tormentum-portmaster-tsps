@@ -1,0 +1,1 @@
+Supply your own GOG Tormentum 1.4.1 game files here. Run tools/patch_game.py on the original SWF; copy the patched output here as Tormentum.swf. Keep the other extracted game assets alongside it. No commercial game data is included. See the repository README.

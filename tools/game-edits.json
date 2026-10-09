@@ -1,0 +1,107 @@
+{
+  "test/control/StateController.as": {
+    "sha256": "eb5b2a1b6fecfe8ee13d4add41d5562610ad320a582b89f00358870be4a0a047",
+    "edits": [
+      {
+        "start": 2,
+        "end": 4,
+        "replacement": "   import flash.net.SharedObject;\n"
+      },
+      {
+        "start": 31,
+        "end": 34,
+        "replacement": "      private var _shared:SharedObject;\n      \n"
+      },
+      {
+        "start": 66,
+        "end": 68,
+        "replacement": "         if(statesXML != null) return;\n         _shared = SharedObject.getLocal(\"tormentum_portmaster\", \"/\");\n         _changed = false;\n         if(_shared.data.states != undefined)\n         {\n            try { statesXML = XML(String(_shared.data.states)); }\n            catch(e:Error) { statesXML = null; }\n         }\n"
+      },
+      {
+        "start": 70,
+        "end": 100,
+        "replacement": "            statesXML = TEMP_XML.copy();\n            _changed = true;\n            save(false);\n         }\n      }\n\n"
+      },
+      {
+        "start": 129,
+        "end": 156,
+        "replacement": "         if(param1) screenIDChanged();\n         if(!_changed) return;\n         if(_shared == null) _shared = SharedObject.getLocal(\"tormentum_portmaster\", \"/\");\n         _shared.data.states = statesXML.toXMLString();\n         _shared.flush();\n"
+      },
+      {
+        "start": 158,
+        "end": 159,
+        "replacement": "\n"
+      }
+    ]
+  },
+  "control/PCGameController.as": {
+    "sha256": "792dfc6b9b35427c585086224a3d6b7f81cae7eb03f4e95af95656f0c699d48a",
+    "edits": [
+      {
+        "start": 3,
+        "end": 4,
+        "replacement": ""
+      },
+      {
+        "start": 15,
+        "end": 16,
+        "replacement": "         _storagePath = \"ruffle_sharedobject\";\n"
+      },
+      {
+        "start": 75,
+        "end": 76,
+        "replacement": "         return _storagePath;\n"
+      }
+    ]
+  },
+  "view/CoreView.as": {
+    "sha256": "1b40d1b4794532618ce60804aa6cdcc12c853b85517fb578d96656be21244ba1",
+    "edits": [
+      {
+        "start": 15,
+        "end": 16,
+        "replacement": ""
+      },
+      {
+        "start": 78,
+        "end": 80,
+        "replacement": ""
+      },
+      {
+        "start": 120,
+        "end": 124,
+        "replacement": "         this.addEventListener(\"keyDown\",escHandler,false,2147483647);\n         Logger.version = \"1.4.1-PortMaster\";\n"
+      },
+      {
+        "start": 306,
+        "end": 308,
+        "replacement": "         GameParams.stage.addEventListener(\"activate\",activateHandler);\n         GameParams.stage.addEventListener(\"deactivate\",deactivateHandler);\n"
+      }
+    ]
+  },
+  "view/apps/Tormentum.as": {
+    "sha256": "ad1974b058b59f10b95c1ac32d70ec6ab0798d9f72e6b52a57fb036d6b102681",
+    "edits": [
+      {
+        "start": 10,
+        "end": 11,
+        "replacement": "   import flash.system.fscommand;\n"
+      },
+      {
+        "start": 74,
+        "end": 76,
+        "replacement": "         this.stage.addEventListener(\"exiting\",onExit);\n         this.stage.addEventListener(\"invoke\",onInvoke);\n"
+      },
+      {
+        "start": 77,
+        "end": 79,
+        "replacement": "         stage.scaleMode = \"showAll\";\n         stage.align = \"\";\n"
+      },
+      {
+        "start": 818,
+        "end": 819,
+        "replacement": "         fscommand(\"quit\", \"\");\n"
+      }
+    ]
+  }
+}
